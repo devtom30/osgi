@@ -1,0 +1,2 @@
+# osgi
+First OSGI projects. 
