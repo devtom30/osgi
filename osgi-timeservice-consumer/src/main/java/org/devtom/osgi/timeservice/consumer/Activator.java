@@ -12,6 +12,7 @@ public class Activator implements BundleActivator {
 
     private BundleContext context;
     private ITimeService service;
+    private TimeConsumerThread thread;
 
     public void start(BundleContext context) throws Exception {
         this.context = context;
@@ -20,9 +21,15 @@ public class Activator implements BundleActivator {
                 .getServiceReference(ITimeService.class.getName());
         service = (ITimeService) context.getService(reference);
         System.out.println("Consumer has started at " + service.getCurrentTime());
+
+        thread = new TimeConsumerThread();
+        thread.start();
     }
 
     public void stop(BundleContext context) throws Exception {
         System.out.println("Consumer has stopped at " + service.getCurrentTime());
+
+        thread.stopThread();
+        thread.join();
     }
 }
