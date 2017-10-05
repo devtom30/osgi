@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>devtom</groupId>
+    <groupId>org.devtom</groupId>
     <artifactId>osgi-timeservice-host</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
@@ -38,7 +38,7 @@
             <version>2.3.3</version>
         </dependency>
         <dependency>
-            <groupId>devtom30</groupId>
+            <groupId>org.devtom</groupId>
             <artifactId>osgi-timeservice</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
