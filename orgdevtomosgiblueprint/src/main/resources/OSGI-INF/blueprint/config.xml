@@ -8,7 +8,7 @@
     <reference id="itimeService" interface="org.devtom.osgi.timeservice.ITimeService" />
 
     <bean id="timeServiceConsumerController"
-          class="org.devtom.osgi.blueprint.example.controller.MyTimeServiceConsumer">
+          class="org.devtom.osgi.blueprint.example.controller.MyTimeServiceConsumer" init-method="startUp">
         <property name="timeService" ref="itimeService" />
     </bean>
 
